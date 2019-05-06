@@ -4,6 +4,7 @@
     { "src": "next.config.js", "use": "@now/next" }
   ],
   "routes": [
-    { "src": "/person/(?<person>[^/]+)$", "dest": "/person?id=$id" }
+    { "src": "/person/(?<person>[^/]+)$", "dest": "/person?id=$id" },
+    { "src": "/vehicle/(?<vehicle>[^/]+)$", "dest": "/vehicle?id=$id" }
   ]
 }

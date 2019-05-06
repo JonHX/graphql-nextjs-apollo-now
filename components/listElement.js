@@ -3,7 +3,7 @@ import gql from 'graphql-tag'
 import List from './list'
 
 export default (props) => {
-  const gqlQuery = props.type === 'people' ? getAllPeople : getAllVehicles
+  const gqlQuery = props.type === 'person' ? getAllPeople : getAllVehicles
   return (
     <Query query={gqlQuery}>
       {({

@@ -9,7 +9,7 @@ class Main extends React.Component {
       <App className='container'>
         <h1>{this.props.router.query.title}</h1>
         <div className='row'>
-          <ListElement type='people' title='People' />
+          <ListElement type='person' title='People' />
           <ListElement type='vehicle' title='Vehicles' />
         </div>
       </App>
