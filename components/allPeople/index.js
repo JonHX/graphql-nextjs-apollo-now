@@ -2,7 +2,8 @@ import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import Link from 'next/link'
 
-export default () => {
+export default (props) => {
+  console.log(props)
   return (
     <Query query={getAllPeople}>
       {({

@@ -1,7 +1,7 @@
 import App from '../components/App'
 import AllPeople from '../components/allPeople'
 import React from 'react'
-import { withRouter } from 'next/router'
+import { withPageRouter } from '../lib/withPageRouter'
 
 class Main extends React.Component {
   render () {
@@ -19,4 +19,4 @@ Main.getInitialProps = async ({ query }) => {
   return { name: query.name }
 }
 
-export default withRouter(Main)
+export default withPageRouter(Main)
