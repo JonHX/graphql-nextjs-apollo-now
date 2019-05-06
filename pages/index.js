@@ -1,7 +1,7 @@
 import App from '../components/App'
-import ListElement from '../components/listElement'
 import React from 'react'
 import { withPageRouter } from '../lib/withPageRouter'
+import ListElement from '../components/listElement'
 
 class Main extends React.Component {
   render () {
