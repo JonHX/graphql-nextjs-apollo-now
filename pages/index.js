@@ -1,5 +1,5 @@
 import App from '../components/App'
-import AllPeople from '../components/AllPeople'
+import AllPeople from '../components/allPeople'
 import React from 'react'
 import { withRouter } from 'next/router'
 
