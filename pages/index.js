@@ -1,5 +1,5 @@
 import App from '../components/App'
-import { ListElement } from '../components/lists/'
+import ListElement from '../components/listElement'
 import React from 'react'
 import { withPageRouter } from '../lib/withPageRouter'
 
