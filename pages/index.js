@@ -5,6 +5,7 @@ import { withRouter } from 'next/router'
 
 class Main extends React.Component {
   render () {
+    console.log(this.props)
     return (
       <App>
         <h1>{this.props.router.query.title}</h1>
@@ -12,6 +13,10 @@ class Main extends React.Component {
       </App>
     )
   }
+}
+
+Main.getInitialProps = async ({ query }) => {
+  return { name: query.name }
 }
 
 export default withRouter(Main)
