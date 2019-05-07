@@ -1,4 +1,4 @@
-import { App, ListElement} from '../components/'
+import { App, ListElement } from '../components/'
 import React from 'react'
 import gql from 'graphql-tag'
 import { withPageRouter } from '../lib/withPageRouter'
