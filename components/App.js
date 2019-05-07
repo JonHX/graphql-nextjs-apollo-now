@@ -1,5 +1,5 @@
 export default ({ children }) => (
-  <main>
+  <main className='container p-4'>
     {children}
     <style jsx global>{`
       * {
@@ -10,6 +10,10 @@ export default ({ children }) => (
       body {
         margin: 0;
         padding: 25px 50px;
+        background: #f4f7fb;
+      }
+      main {
+        background: #fff;
       }
       a {
         color: #22bad9;

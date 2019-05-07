@@ -34,7 +34,7 @@ export default withPageRouter(Person)
 export const getPerson = gql`query($personId: ID){
   person(id: $personId) {
     name
-    created
+    id
     gender
     height
     birthYear
@@ -46,6 +46,12 @@ export const getPerson = gql`query($personId: ID){
     homeworld {
       name
     }
+    filmConnection{
+      films {
+        id
+        title
+      }
+    }
     vehicleConnection{
       vehicles {
         id
@@ -54,6 +60,7 @@ export const getPerson = gql`query($personId: ID){
     }
     starshipConnection{
       starships{
+        id
         name
       }
     }

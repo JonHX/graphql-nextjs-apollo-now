@@ -6,8 +6,7 @@ import { withPageRouter } from '../lib/withPageRouter'
 class Home extends React.Component {
   render () {
     return (
-      <App className='container'>
-        <h1>{this.props.router.query.title}</h1>
+      <App>
         <div className='row'>
           <ListElement type='person' title='People' query={getAllPeople} />
           <ListElement type='vehicle' title='Vehicles' query={getAllVehicles} />
