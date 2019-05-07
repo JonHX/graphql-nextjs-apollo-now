@@ -1,6 +1,6 @@
 {
   "name": "hasura-nextjs-serverless",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "scripts": {
     "now-build": "next build",
     "dev": "node server.js",
@@ -14,11 +14,11 @@
     "isomorphic-unfetch": "^3.0.0",
     "next": "latest",
     "prop-types": "^15.6.2",
-    "react": "^16.7.0",
+    "react": "^16.8.6",
     "react-apollo": "^2.1.11",
-    "react-dom": "^16.7.0",
+    "react-dom": "^16.8.6",
     "serverless-http": "^1.9.0"
   },
-  "author": "Praveen <praveen@hasura.io>",
+  "author": "Jon Tarrant <jontarrant.me>",
   "license": "MIT"
 }

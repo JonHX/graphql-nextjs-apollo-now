@@ -1,5 +1,5 @@
 import { Query } from 'react-apollo'
-import List from './List'
+import { List } from './'
 
 const ListElement = ({ query, title, type}) => {
   return (
@@ -9,11 +9,11 @@ const ListElement = ({ query, title, type}) => {
         error,
         data: {
           parent: {
-            listItems
+            listItems = null
           }
         }
       }) => {
-        if (error) return <ErrorMessage message='Error loading people.' />
+        if (!listItems || error) return <ErrorMessage message='No items found.' />
         if (loading) return <div>Loading</div>
         return (
           <div className='col-md-6'>
