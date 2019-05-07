@@ -1,24 +1,40 @@
-import App from '../components/App'
+import { App, ListElement} from '../components/'
 import React from 'react'
+import gql from 'graphql-tag'
 import { withPageRouter } from '../lib/withPageRouter'
-import ListElement from '../components/listElement'
 
-class Main extends React.Component {
+class Home extends React.Component {
   render () {
     return (
       <App className='container'>
         <h1>{this.props.router.query.title}</h1>
         <div className='row'>
-          <ListElement type='person' title='People' />
-          <ListElement type='vehicle' title='Vehicles' />
+          <ListElement type='person' title='People' query={getAllPeople} />
+          <ListElement type='vehicle' title='Vehicles' query={getAllVehicles} />
         </div>
       </App>
     )
   }
 }
 
-Main.getInitialProps = async ({ query }) => {
-  return { name: query.name }
-}
+export default withPageRouter(Home)
 
-export default withPageRouter(Main)
+// List types graphql using alias for consistant data structures
+export const getAllPeople = gql`{
+  parent: allPeople {
+    listItems: people {
+      id,
+      name
+    }
+  }
+}
+`
+
+export const getAllVehicles = gql`{
+  parent: allVehicles {
+    listItems: vehicles {
+      id
+      name
+    }
+  }
+}`

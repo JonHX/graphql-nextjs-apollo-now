@@ -1,4 +1,4 @@
-import App from '../components/App'
+import { App } from '../components/'
 import React from 'react'
 import { withPageRouter } from '../lib/withPageRouter'
 

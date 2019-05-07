@@ -1,11 +1,9 @@
 import { Query } from 'react-apollo'
-import gql from 'graphql-tag'
-import List from './list'
+import List from './List'
 
-export default (props) => {
-  const gqlQuery = props.type === 'person' ? getAllPeople : getAllVehicles
+const ListElement = (props) => {
   return (
-    <Query query={gqlQuery}>
+    <Query query={props.query}>
       {({
         loading,
         error,
@@ -17,7 +15,6 @@ export default (props) => {
       }) => {
         if (error) return <ErrorMessage message='Error loading people.' />
         if (loading) return <div>Loading</div>
-        console.log(listItems)
         return (
           <div className='col-md-6'>
             <h3>{props.title}</h3>
@@ -29,22 +26,4 @@ export default (props) => {
   )
 }
 
-// List types graphql using alias for consistant data structures
-export const getAllPeople = gql`{
-  parent: allPeople {
-    listItems: people {
-      id,
-      name
-    }
-  }
-}
-`
-
-export const getAllVehicles = gql`{
-  parent: allVehicles {
-    listItems: vehicles {
-      id
-      name
-    }
-  }
-}`
+export default ListElement

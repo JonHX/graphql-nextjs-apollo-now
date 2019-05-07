@@ -1,7 +1,7 @@
 import App, { Container } from 'next/app'
 import Head from 'next/head'
 import React from 'react'
-import Header from '../components/Header'
+import { Header } from '../components/'
 import withApolloClient from '../lib/with-apollo-client'
 import { ApolloProvider } from 'react-apollo'
 

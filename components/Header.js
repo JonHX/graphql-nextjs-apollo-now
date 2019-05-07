@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import { withRouter } from 'next/router'
+import { withPageRouter } from '../lib/withPageRouter'
 
 const Header = ({ router: { pathname } }) => (
   <header>
-    <h1>Star Wars Wiki</h1>
+    <h1>Star Wars Wiki</h1>{pathname}
   </header>
 )
 
-export default withRouter(Header)
+export default withPageRouter(Header)
