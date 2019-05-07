@@ -17,5 +17,7 @@ const List = ({ listItems, slug }) => {
         })
       }
     </ul>
-)}
+  )
+}
+
 export default List

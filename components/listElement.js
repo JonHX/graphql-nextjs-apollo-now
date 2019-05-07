@@ -1,5 +1,5 @@
 import { Query } from 'react-apollo'
-import { List } from './'
+import List from './List'
 
 const ListElement = ({ query, title, type}) => {
   return (
