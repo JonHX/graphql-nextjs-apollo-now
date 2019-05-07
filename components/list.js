@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default ({ listItems, slug }) => (
+const List = ({ listItems, slug }) => (
     <ul>
       { listItems.map( (item) => {
         return (
@@ -16,3 +16,5 @@ export default ({ listItems, slug }) => (
     }
     </ul>
 )
+
+export default List
