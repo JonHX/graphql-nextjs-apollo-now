@@ -1,7 +1,8 @@
 import Link from 'next/link'
 
-const List = ({ listItems, slug }) => (
-    <ul>
+const List = ({ listItems, slug }) => {
+    return (
+      <ul>
       { listItems.map( (item) => {
           return (
             <li key={item.id}>
@@ -14,8 +15,7 @@ const List = ({ listItems, slug }) => (
             </li>
           )
         })
-    }
+      }
     </ul>
-)
-
+)}
 export default List

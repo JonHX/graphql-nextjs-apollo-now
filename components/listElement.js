@@ -1,9 +1,9 @@
 import { Query } from 'react-apollo'
 import { List } from './'
 
-const ListElement = (props) => {
+const ListElement = ({ query, title, type}) => {
   return (
-    <Query query={props.query}>
+    <Query query={query}>
       {({
         loading,
         error,
@@ -17,8 +17,8 @@ const ListElement = (props) => {
         if (loading) return <div>Loading</div>
         return (
           <div className='col-md-6'>
-            <h3>{props.title}</h3>
-            <List listItems={listItems} slug={props.type} />
+            <h3>{title}</h3>
+            <List listItems={listItems} slug={type} />
           </div>
         )
       }}
