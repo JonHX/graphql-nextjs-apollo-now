@@ -6,7 +6,7 @@ const Header = ({ router: { pathname } }) => (
     <h1>Star Wars Wiki</h1>
     { pathname !== '/' && (
       <Link
-        href={'/'}
+        href={'/index'}
         as={'/'}>
         <a>&#x3c; Back</a>
       </Link>
