@@ -1,31 +1,26 @@
 import Link from 'next/link'
 import { Image, List } from './'
 
-const PersonElement = ({
-  person: {
-    birthYear,
-    gender,
-    hairColor,
-    height,
-    homeworld: {
-      name: homeWorldName
-    },
-    id,
-    name,
-    species: {
-      name: speciesName
-    },
+const VehicleElement = ({
+  vehicle: {
+    cargoCapacity,
+    crew,
     filmConnection: {
       films
     },
-    starshipConnection: {
-      starships
+    id,
+    manufacturers,
+    maxAtmospheringSpeed,
+    model,
+    name,
+    passengers,
+    pilotConnection: {
+      pilots
     },
-    vehicleConnection: {
-      vehicles
-    }
+    vehicleClass
   }
 }) => {
+  console.log(pilots)
   return (
     <div className='row'>
       <div className='col-md-4 col-lg-3 p-3 text-center'>
@@ -34,37 +29,23 @@ const PersonElement = ({
       <div className='col-md-8 col-sm-12 col-lg-4 p-3 row'>
         <div className='col-6 col-sm-6 col-lg-12'>
           <p><strong>Name:</strong>{name}</p>
-          <p><strong>Gender:</strong>{gender}</p>
-          <p><strong>Species:</strong>{speciesName}</p>
+          <p><strong>Model:</strong>{model}</p>
+          <p><strong>Class:</strong>{vehicleClass}</p>
         </div>
         <div className='col-6 col-sm-6 col-lg-12'>
-          <p><strong>Homeworld:</strong>{homeWorldName}</p>
-          <p><strong>Height:</strong>{height}cm</p>
-          <p><strong>Hair Color:</strong>{hairColor}</p>
+          <p><strong>Crew:</strong>{crew}</p>
+          <p><strong>Cargo Capacity:</strong>{cargoCapacity}cm</p>
+          <p><strong>Speed:</strong>{maxAtmospheringSpeed}km/h</p>
         </div>
       </div>
       <div className='col-md-12 col-lg-4 p-3'>
         <h3>Related</h3>
         <div>
-          <strong>Vehicles</strong>
-          { vehicles.length ?
-            <List listItems={vehicles} slug='vehicle' />
+          <strong>Pilots</strong>
+          { pilots.length ?
+            <List listItems={pilots} slug='person' />
             :
-            <p><span>This character has no related vehicles.</span></p>
-          }
-        </div>
-        <div>
-          <strong>Starships</strong>
-          { starships.length ?
-            <ul>
-              {starships.map((item)=>{
-                return (
-                  <li key={item.id}>{item.name}</li>
-                )
-              })}
-            </ul>
-            :
-            <p><span>This character has no related starships.</span></p>
+            <p><span>This character has no related Pilots.</span></p>
           }
         </div>
         <div>
@@ -96,4 +77,4 @@ const PersonElement = ({
   )
 }
 
-export default PersonElement
+export default VehicleElement

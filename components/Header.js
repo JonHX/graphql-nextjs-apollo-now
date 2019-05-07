@@ -4,7 +4,7 @@ import { withPageRouter } from '../lib/withPageRouter'
 const Header = ({ router: { pathname } }) => (
   <header className='container p-0'>
     <h1 className='text-center m-3'>Star Wars Wiki <img className='img-responsive' width="50" src={'https://emojis.slackmojis.com/emojis/images/1482947228/1532/lightsaber.png'} /></h1>
-    { pathname !== '/' && (
+    { ( pathname !== '/' && pathname !== '/index' ) && (
       <Link
         href={'/index'}
         as={'/'}>

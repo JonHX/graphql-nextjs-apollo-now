@@ -5,6 +5,7 @@ import Image from './Image'
 import List from './List'
 import ListElement from './ListElement'
 import PersonElement from './PersonElement'
+import VehicleElement from './VehicleElement'
 
 export {
   App,
@@ -13,5 +14,6 @@ export {
   Image,
   List,
   ListElement,
-  PersonElement
+  PersonElement,
+  VehicleElement
 }
