@@ -1,0 +1,28 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "commonjs": true
+  },
+  "extends": "eslint-config-airbnb",
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "semi": [2,"never"],
+    "react/prop-types": 0,
+    "react/jsx-uses-vars": [2],
+    "no-console": 0,
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "import/no-cycle": "off",
+    "import/no-named-as-default-member": "off",
+    "import/no-named-as-default": "off"
+  }
+}

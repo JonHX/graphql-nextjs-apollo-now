@@ -15,5 +15,5 @@ export {
   List,
   ListElement,
   PersonElement,
-  VehicleElement
+  VehicleElement,
 }
