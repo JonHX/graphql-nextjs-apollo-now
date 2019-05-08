@@ -26,7 +26,6 @@ const Home = () => {
   `
   return (
     <App>
-      <h2>test</h2>
       <div className="row">
         <CategoryList type="person" title="People" query={getAllPeople} />
         <CategoryList type="vehicle" title="Vehicles" query={getAllVehicles} />
