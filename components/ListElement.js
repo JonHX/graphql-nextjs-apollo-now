@@ -10,7 +10,7 @@ const ListElement = ({ query, title, type }) => (
         parent: { listItems = null },
       },
     }) => {
-      if (!listItems || error) return <ErrorMessage message="No items found." />
+      if (!listItems.length || error) return <ErrorMessage message="No items found." />
       if (loading) return <div>Loading</div>
       return (
         <div className="col-md-6">
