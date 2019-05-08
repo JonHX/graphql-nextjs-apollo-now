@@ -6,7 +6,6 @@
     "dev": "node server.js",
     "build": "next build",
     "lint": "eslint --fix --ext .js pages components config",
-    "test": "jest",
     "start": "cross-env NODE_ENV=production node server.js"
   },
   "dependencies": {
