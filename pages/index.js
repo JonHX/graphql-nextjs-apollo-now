@@ -1,5 +1,5 @@
 import gql from 'graphql-tag'
-import { App, ListElement } from '../components'
+import { App, CategoryList } from '../components'
 import { withPageRouter } from '../lib/withPageRouter'
 
 const Home = () => {
@@ -26,9 +26,10 @@ const Home = () => {
   `
   return (
     <App>
+      <h2>test</h2>
       <div className="row">
-        <ListElement type="person" title="People" query={getAllPeople} />
-        <ListElement type="vehicle" title="Vehicles" query={getAllVehicles} />
+        <CategoryList type="person" title="People" query={getAllPeople} />
+        <CategoryList type="vehicle" title="Vehicles" query={getAllVehicles} />
       </div>
     </App>
   )

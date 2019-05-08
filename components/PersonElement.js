@@ -20,31 +20,31 @@ const PersonElement = ({
     </div>
     <div className="col-md-8 col-sm-12 col-lg-4 p-3 row">
       <div className="col-6 col-sm-6 col-lg-12">
-        <p>
+        <p className="name">
           <strong>Name:</strong>
           {name}
         </p>
-        <p>
+        <p className="gender">
           <strong>Gender:</strong>
           {gender}
         </p>
-        <p>
+        <p className="species">
           <strong>Species:</strong>
           {speciesName}
         </p>
       </div>
       <div className="col-6 col-sm-6 col-lg-12">
-        <p>
+        <p className="homeWorld">
           <strong>Homeworld:</strong>
           {homeWorldName}
         </p>
-        <p>
+        <p className="height">
           <strong>Height:</strong>
           {height}
 cm
         </p>
-        <p>
-          <strong>Hair Color:</strong>
+        <p className="hairColor">
+          <strong>Hair Colour:</strong>
           {hairColor}
         </p>
       </div>
@@ -57,7 +57,7 @@ cm
           <List listItems={vehicles} slug="vehicle" />
         ) : (
           <p>
-            <span>This character has no related vehicles.</span>
+            <span className="noVehicles">This character has no related vehicles.</span>
           </p>
         )}
       </div>
@@ -71,7 +71,7 @@ cm
           </ul>
         ) : (
           <p>
-            <span>This character has no related starships.</span>
+            <span className="noStarships">This character has no related starships.</span>
           </p>
         )}
       </div>
@@ -85,23 +85,23 @@ cm
           </ul>
         ) : (
           <p>
-            <span>This character has no related films.</span>
+            <span className="noFilms">This character has no related films.</span>
           </p>
         )}
       </div>
     </div>
     <style jsx>
       {`
-      div p {
-        font-size: 1.4em;
-      }
-      div p strong,
-      div span {
-        font-size: 14px;
-        display: block;
-        clear: right;
-      }
-    `}
+        div p {
+          font-size: 1.4em;
+        }
+        div p strong,
+        div span {
+          font-size: 14px;
+          display: block;
+          clear: right;
+        }
+      `}
     </style>
   </div>
 )

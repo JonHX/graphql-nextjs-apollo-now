@@ -1,0 +1,4 @@
+--require @babel/register
+--file mocha.setup.js
+--recursive
+-r jsdom-global/register

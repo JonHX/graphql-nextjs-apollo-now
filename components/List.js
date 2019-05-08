@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const List = ({ listItems, slug }) => (
+const List = ({ listItems = [], slug }) => (
   <ul>
     {listItems.map(item => (
       <li key={item.id}>

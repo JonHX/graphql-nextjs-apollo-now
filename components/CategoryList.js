@@ -1,7 +1,7 @@
 import { Query } from 'react-apollo'
 import { ErrorMessage, List } from '.'
 
-const ListElement = ({ query, title, type }) => (
+const CategoryList = ({ query, title, type }) => (
   <Query query={query}>
     {({
       loading,
@@ -10,7 +10,7 @@ const ListElement = ({ query, title, type }) => (
         parent: { listItems = null },
       },
     }) => {
-      if (!listItems.length || error) return <ErrorMessage message="No items found." />
+      if (!listItems || error) return <ErrorMessage message="No items found." />
       if (loading) return <div>Loading</div>
       return (
         <div className="col-md-6">
@@ -22,4 +22,4 @@ const ListElement = ({ query, title, type }) => (
   </Query>
 )
 
-export default ListElement
+export default CategoryList

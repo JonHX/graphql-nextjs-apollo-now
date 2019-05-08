@@ -20,32 +20,32 @@ const VehicleElement = ({
     </div>
     <div className="col-md-8 col-sm-12 col-lg-4 p-3 row">
       <div className="col-6 col-sm-6 col-lg-12">
-        <p>
+        <p className="name">
           <strong>Name:</strong>
           {name}
         </p>
-        <p>
+        <p className="model">
           <strong>Model:</strong>
           {model}
         </p>
-        <p>
+        <p className="class">
           <strong>Class:</strong>
           {vehicleClass}
         </p>
       </div>
       <div className="col-6 col-sm-6 col-lg-12">
-        <p>
+        <p className="crewPassengers">
           <strong>Crew/Passengers</strong>
           {crew}
 /
           {passengers}
         </p>
-        <p>
+        <p className="cargoCapacity">
           <strong>Cargo Capacity:</strong>
           {cargoCapacity}
 cm
         </p>
-        <p>
+        <p className="speed">
           <strong>Speed:</strong>
           {maxAtmospheringSpeed}
 km/h
@@ -59,7 +59,7 @@ km/h
         {pilots.length ? (
           <List listItems={pilots} slug="person" />
         ) : (
-          <p>
+          <p className="noPilots">
             <span>This character has no related Pilots.</span>
           </p>
         )}
@@ -73,7 +73,7 @@ km/h
             ))}
           </ul>
         ) : (
-          <p>
+          <p className="noFilms">
             <span>This character has no related films.</span>
           </p>
         )}

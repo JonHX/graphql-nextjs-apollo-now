@@ -3,7 +3,7 @@ import ErrorMessage from './ErrorMessage'
 import Header from './Header'
 import Image from './Image'
 import List from './List'
-import ListElement from './ListElement'
+import CategoryList from './CategoryList'
 import PersonElement from './PersonElement'
 import VehicleElement from './VehicleElement'
 
@@ -13,7 +13,7 @@ export {
   Header,
   Image,
   List,
-  ListElement,
+  CategoryList,
   PersonElement,
   VehicleElement,
 }

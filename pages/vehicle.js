@@ -39,6 +39,7 @@ const Vehicle = ({
     <App>
       <Query query={getVehicle} variables={{ vehicleId }}>
         {({ loading, error, data: { vehicle } }) => {
+          console.log(JSON.stringify(vehicle))
           if (error) return <ErrorMessage message="Error loading Vehicle." />
           if (loading) return <div>Loading</div>
           return <VehicleElement vehicle={vehicle} />
