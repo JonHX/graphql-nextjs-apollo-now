@@ -47,6 +47,7 @@ Using NextJS and Zeit Serverless the routing is server-less dynamic. GraphQL wra
 
 ## Todo list
 * [ ] Automation tests in nightwatch
+* [ ] Accessibility tests ( partially implemented in linting and //WAVE accessibility)
 * [ ] Category page e.g person / vehicle
 * [ ] Add planets, films and starship types
 * [ ] Breadcrumb
