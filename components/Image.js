@@ -14,6 +14,8 @@ const Image = ({ id, name, size }) => {
         {`
         img {
           max-width: 100%;
+          min-height: 50px;
+          min-width 50px;
         }
       `}
       </style>
