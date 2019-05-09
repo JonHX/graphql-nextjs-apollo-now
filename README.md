@@ -23,7 +23,12 @@ Check the [TO-DO LIST.](#todo-list)
 Images are served from **images.jonsmedia.com**, using a dynamic image cropper hosted in [AWS lambda and S3](https://aws.amazon.com/)
 `images.jonsmedia.com/**width**x**height**/image.jpg`
 
+
+## Pipeline & Pull request process
 Hosted on Deploy.now by Zeit for serverless
+
+- Tests are run before build and deployment.
+- Builds must pass to deploy
 
 [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/JonHX/graphql-nextjs-apollo-now)
 
