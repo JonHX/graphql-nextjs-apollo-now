@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { Image } from '.'
 
@@ -91,6 +92,13 @@ List.defaultProps = {
   initialShowAmount: 10,
   listItems: [],
   thumbnail: false,
+}
+
+List.propTypes = {
+  slug: PropTypes.string.isRequired,
+  initialShowAmount: PropTypes.number,
+  listItems: PropTypes.array,
+  thumbnail: PropTypes.bool
 }
 
 export default List

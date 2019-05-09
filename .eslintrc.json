@@ -27,6 +27,8 @@
     "jsx-a11y/no-noninteractive-element-interactions": "off",
     "react/destructuring-assignment": "off",
     "react/no-access-state-in-setstate": "off",
-    "jsx-a11y/interactive-supports-focus": "off"
+    "jsx-a11y/interactive-supports-focus": "off",
+    "react/forbid-prop-types": "off",
+    "comma-dangle": "off"
   }
 }

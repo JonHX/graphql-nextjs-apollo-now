@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { Image, List } from '.'
 
 const PersonElement = ({
@@ -105,5 +106,20 @@ cm
     </style>
   </div>
 )
+
+PersonElement.propTypes = {
+  person: PropTypes.shape({
+    gender: PropTypes.string,
+    hairColor: PropTypes.string,
+    height: PropTypes.number,
+    homeworld: PropTypes.object,
+    id: PropTypes.string,
+    name: PropTypes.string,
+    species: PropTypes.object,
+    filmConnection: PropTypes.object,
+    starshipConnection: PropTypes.object,
+    vehicleConnection: PropTypes.object
+  }).isRequired
+}
 
 export default PersonElement

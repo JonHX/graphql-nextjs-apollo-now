@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { assetsUrl } from '../config'
 
 const Image = ({ id, name, size }) => {
@@ -21,6 +22,19 @@ const Image = ({ id, name, size }) => {
       </style>
     </React.Fragment>
   )
+}
+
+Image.defaultProps = {
+  size: false
+}
+
+Image.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  size: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.number
+  ])
 }
 
 export default Image

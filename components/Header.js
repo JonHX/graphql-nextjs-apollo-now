@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { withPageRouter } from '../lib/withPageRouter'
 
@@ -19,5 +20,9 @@ const Header = ({ router: { pathname } }) => (
     )}
   </header>
 )
+
+Header.propTypes = {
+  router: PropTypes.object.isRequired,
+}
 
 export default withPageRouter(Header)

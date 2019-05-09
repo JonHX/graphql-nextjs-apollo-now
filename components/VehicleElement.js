@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { Image, List } from '.'
 
 const VehicleElement = ({
@@ -94,5 +95,20 @@ km/h
     </style>
   </div>
 )
+
+VehicleElement.propTypes = {
+  vehicle: PropTypes.shape({
+    cargoCapacity: PropTypes.number,
+    crew: PropTypes.string,
+    filmConnection: PropTypes.object,
+    id: PropTypes.string,
+    maxAtmospheringSpeed: PropTypes.number,
+    model: PropTypes.string,
+    name: PropTypes.string,
+    passengers: PropTypes.string,
+    pilotConnection: PropTypes.object,
+    vehicleClass: PropTypes.string,
+  }).isRequired
+}
 
 export default VehicleElement

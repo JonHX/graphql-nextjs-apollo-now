@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { Query } from 'react-apollo'
 import { ErrorMessage, List } from '.'
 
@@ -21,5 +22,11 @@ const CategoryList = ({ query, title, type }) => (
     }}
   </Query>
 )
+
+CategoryList.propTypes = {
+  query: PropTypes.object.isRequired,
+  title: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+}
 
 export default CategoryList
