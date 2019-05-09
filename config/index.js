@@ -1,3 +1,3 @@
 module.exports = {
-  assetsUrl: 'https://d2015p4znl61y4.cloudfront.net',
+  assetsUrl: 'https://images.jonsmedia.com',
 }

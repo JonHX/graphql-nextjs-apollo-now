@@ -57,7 +57,7 @@ km/h
       <div>
         <strong>Pilots</strong>
         {pilots.length ? (
-          <List listItems={pilots} slug="person" />
+          <List listItems={pilots} slug="person" thumbnail />
         ) : (
           <p className="noPilots">
             <span>This character has no related Pilots.</span>

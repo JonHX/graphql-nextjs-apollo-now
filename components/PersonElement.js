@@ -54,7 +54,7 @@ cm
       <div>
         <strong>Vehicles</strong>
         {vehicles.length ? (
-          <List listItems={vehicles} slug="vehicle" />
+          <List listItems={vehicles} slug="vehicle" thumbnail />
         ) : (
           <p>
             <span className="noVehicles">This character has no related vehicles.</span>

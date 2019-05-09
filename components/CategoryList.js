@@ -15,7 +15,7 @@ const CategoryList = ({ query, title, type }) => (
       return (
         <div className="col-md-6">
           <h3>{title}</h3>
-          <List listItems={listItems} slug={type} />
+          <List listItems={listItems} slug={type} thumbnail />
         </div>
       )
     }}

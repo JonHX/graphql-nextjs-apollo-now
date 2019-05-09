@@ -21,6 +21,14 @@ describe('Image', () => {
     })
   })
 
+  context('Changes size based on props', () => {
+    const component = shallow(<Image id={id} name={name} size={250} />)
+
+    it('Has correct src attribute', () => {
+      expect(component.find('img').props().src).to.equal(`${assetsUrl}/250x250/${id}.jpg`)
+    })
+  })
+
   context('Falls over gracefully', () => {
     const component = shallow(<Image />)
 

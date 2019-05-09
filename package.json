@@ -2,12 +2,12 @@
   "name": "hasura-nextjs-serverless",
   "version": "0.0.1",
   "scripts": {
-    "now-build": "next build",
+    "now-build": "npm run test && next build",
     "dev": "node server.js",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node server.js",
     "lint": "eslint --fix --ext .js pages components config",
-    "test": "NODE_ENV=test mocha"
+    "test": "npm run lint && NODE_ENV=test mocha"
   },
   "dependencies": {
     "apollo-boost": "^0.1.16",
