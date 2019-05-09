@@ -13,7 +13,7 @@ class List extends Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     if (this.props.listItems.length) {
       this.setState({
         itemsToShow: this.props.listItems.slice(0, this.props.initialShowAmount),
